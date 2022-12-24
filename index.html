@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI Cards</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Boxicons CSS -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="container">
+        <h1>Filter ui cards via their profession.</h1>
+       
+        <select id="selectFilter">
+            <option value="profession" selected>Profession</option>
+            <option value="developer">Developer</option>
+            <option value="admin">Admin</option>
+        </select>
+        <div id="result"></div>
+        <table class="table" id="tableData">
+            <tbody>
+                <tr class="tableRow" id="tableRow">
+                    <td><span id="sno">1.</span></td>
+                    <td>Name: <span id="fname"></span></td>
+                    <td>Profession: <span id="profession"></span></td>
+                    <td>Age: <span id="age"></span></td>
+                </tr>
+            </tbody>
+        </table>
+        <div>
+            <button id="filterBtn" class="btn" onclick="">Filter</button>
+        </div>
+        <div class="user">
+            <h3>Add a new user</h3>
+            <form onsubmit="addUser(event)">
+                <div class="input">
+                    <span>
+                        <label for="enterName" class="userInput">Enter Name</label><br>
+                        <input type="text" id="enterName" size="60">
+                    </span>
+                    <span>
+                        <label for="enterProfession" class="userInput">Enter Profession</label><br>
+                        <input type="text" id="enterProfession" size="60">
+                    </span>
+                    <span>
+                        <label for="enterAge" class="userInput">Enter Age</label><br>
+                        <input type="number" id="enterAge" size="60">
+                    </span>
+                </div>
+                <div>
+                    <button id="addUserBtn" class="btn">Add User</button>
+                </div>
+            </form>
+        </div>
+        
+    </div>      
+    <!-- Javascript -->
+    <script src="script.js"></script>
+</body>
+</html>
